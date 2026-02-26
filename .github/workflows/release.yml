@@ -92,7 +92,7 @@ jobs:
           echo "apk_renamed_path=$DIR/Soomjae-v${VERSION}.apk" >> $GITHUB_OUTPUT
 
       - name: Upload Android Artifact
-        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7
         with:
           name: android-apk
           path: ${{ steps.rename_apk.outputs.apk_renamed_path }}
@@ -131,7 +131,7 @@ jobs:
 
       - name: Upload macOS Artifact
         if: steps.rename_dmg.outputs.dmg_renamed_path != ''
-        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7
         with:
           name: macos-dmg
           path: ${{ steps.rename_dmg.outputs.dmg_renamed_path }}
@@ -172,7 +172,7 @@ jobs:
 
       - name: Upload Windows Artifact
         if: steps.rename_exe.outputs.exe_renamed_path != ''
-        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7
         with:
           name: windows-exe
           path: ${{ steps.rename_exe.outputs.exe_renamed_path }}
@@ -189,7 +189,7 @@ jobs:
 
     steps:
       - name: Download all artifacts
-        uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6
+        uses: actions/download-artifact@70fc10c6e5e1ce46ad2ea6f2b72d43f7d47b13c3 # v8
         with:
           path: release_files
 
